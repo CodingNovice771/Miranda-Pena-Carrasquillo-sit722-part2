@@ -1,1 +1,42 @@
 # Write Kubernetes Deployment Script
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-catalog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-catalog
+  template:
+    metadata:
+      labels:
+        app: book-catalog
+    spec:
+      containers:
+      - name: book-catalog
+        image: book-catalog:1
+        ports:
+        - containerPort: 5000
+        env:
+        - name: POSTGRES_HOST
+          value: "dpg-cr2r8gjv2p9s739c98pg-a.render.com"
+        - name: POSTGRES_DB
+          value: "library_db_yaip"
+        - name: POSTGRES_USER
+          value: "miranda_pena_carrasquillo"
+        - name: POSTGRES_PASSWORD
+          value: "jRctnregW3LxOu5yyQPngdskliFaZfHm"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-catalog-service
+spec:
+  type: NodePort
+  selector:
+    app: book-catalog
+  ports:
+  - port: 5000
+    targetPort: 5000
+    nodePort: 30001
