@@ -25,4 +25,4 @@ ENV POSTGRES_HOST=dpg-cr2r8gjv2p9s739c98pg-a.render.com
 ENV POSTGRES_PORT=5432
 
 # Command to run the application
-CMD ["node", "app.js"]
+CMD ["node", "index.js"]
