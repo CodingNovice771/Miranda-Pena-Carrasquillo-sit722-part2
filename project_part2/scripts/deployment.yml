@@ -20,7 +20,7 @@ spec:
         - containerPort: 5000
         env:
         - name: DATABASE_URL
-          value: "postgresql://miranda_pena_carrasquillo:jRctnregW3LxOu5yyQPngdskliFaZfHm@dpg-cr2r8gjv2p9s739c98pg-a.render.com/library_db_yaip"
+          value: "postgresql://miranda_pena_carrasquillo:jRctnregW3LxOu5yyQPngdskliFaZfHm@dpg-cr2r8gjv2p9s739c98pg-a.singapore-postgres.render.com/library_db_yaip"
 ---
 apiVersion: v1
 kind: Service
