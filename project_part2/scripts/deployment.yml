@@ -19,14 +19,8 @@ spec:
         ports:
         - containerPort: 5000
         env:
-        - name: POSTGRES_HOST
-          value: "dpg-cr2r8gjv2p9s739c98pg-a.render.com"
-        - name: POSTGRES_DB
-          value: "library_db_yaip"
-        - name: POSTGRES_USER
-          value: "miranda_pena_carrasquillo"
-        - name: POSTGRES_PASSWORD
-          value: "jRctnregW3LxOu5yyQPngdskliFaZfHm"
+        - name: DATABASE_URL
+          value: "postgresql://miranda_pena_carrasquillo:jRctnregW3LxOu5yyQPngdskliFaZfHm@dpg-cr2r8gjv2p9s739c98pg-a.render.com/library_db_yaip"
 ---
 apiVersion: v1
 kind: Service
