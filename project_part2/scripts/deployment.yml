@@ -17,7 +17,7 @@ spec:
       - name: book-catalog
         image: book-catalog:1
         ports:
-        - containerPort: 5000
+        - containerPort: 8000
         env:
         - name: DATABASE_URL
           value: "postgresql://miranda_pena_carrasquillo:jRctnregW3LxOu5yyQPngdskliFaZfHm@dpg-cr2r8gjv2p9s739c98pg-a.singapore-postgres.render.com/library_db_yaip"
@@ -31,6 +31,6 @@ spec:
   selector:
     app: book-catalog
   ports:
-  - port: 5000
-    targetPort: 5000
+  - port: 8000
+    targetPort: 8000
     nodePort: 30001
